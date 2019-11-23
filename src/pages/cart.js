@@ -39,7 +39,7 @@ const Cart = () => {
          {  
              cartData ? (
 
-                <form name="order" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                <form name="order" method="post" netlify data-netlify="true" data-netlify-honeypot="bot-field">
                     <input type="hidden" name="bot-field" />
                     <input type="hidden" name="form-name" value="order" />
                     <div>
