@@ -26,10 +26,9 @@ const addCart = (id, title, price ) => {
 
 }
 
-function Product({data, cartNum}) {
+function Product({data}) {
   return (
     <Layout>
-      {console.log(cartNum)}
     <p>{data.contentfulProducts.title}</p>
     <p>{data.contentfulProducts.price}</p>
     <button onClick={()=>addCart(data.contentfulProducts.id,

@@ -30,6 +30,7 @@ export const query = graphql`
     allContentfulProducts {
       edges {
         node {
+          id
           title
           slug
           price

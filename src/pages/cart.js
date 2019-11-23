@@ -18,7 +18,7 @@ const Textarea = styled.textarea`
 
 const Cart = () => {
 
-    const [cartData, setCartData ] = useState(0); 
+    const [cartData, setCartData ] = useState(''); 
   
     useEffect(() => {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -36,27 +36,19 @@ const Cart = () => {
         <Layout>
             <h2>CART</h2>
 
-            <form name="Order Form" method="post" netlify data-netlify="true" data-netlify-honeypot="bot-field">
+            <form name="Order Form" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                     <input type="hidden" name="bot-field" />
                     <input type="hidden" name="form-name" value="Order Form" />
                 
-            {  
-             cartData ? (
-                <>
                     <div>
                         <label>Products</label>
-                        <Textarea name="products" readOnly value={cartData} />
+                        <Textarea name="products" readOnly value={cartData} required/>
                     </div>
                     <p>
                         <label>Your Name: <input type="text" name="name" required/></label>   
                     </p>
                     <button type="submit">주문</button>
-                </>
-                
-             ) : (
-                 <div>EMPTY</div>
-             )
-            }   
+            
             </form>
         </Layout>
     )
