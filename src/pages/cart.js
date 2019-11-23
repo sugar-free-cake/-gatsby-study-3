@@ -35,13 +35,14 @@ const Cart = () => {
     return(
         <Layout>
             <h2>CART</h2>
-                
-         {  
-             cartData ? (
 
-                <form name="order" method="post" netlify data-netlify="true" data-netlify-honeypot="bot-field">
+            <form name="Order Form" method="post" netlify data-netlify="true" data-netlify-honeypot="bot-field">
                     <input type="hidden" name="bot-field" />
-                    <input type="hidden" name="form-name" value="order" />
+                    <input type="hidden" name="form-name" value="Order Form" />
+                
+            {  
+             cartData ? (
+                <>
                     <div>
                         <label>Products</label>
                         <Textarea name="products" readOnly value={cartData} />
@@ -50,12 +51,13 @@ const Cart = () => {
                         <label>Your Name: <input type="text" name="name" required/></label>   
                     </p>
                     <button type="submit">주문</button>
-                </form>
+                </>
                 
              ) : (
                  <div>EMPTY</div>
              )
-         }   
+            }   
+            </form>
         </Layout>
     )
   
