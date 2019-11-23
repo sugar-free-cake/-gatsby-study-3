@@ -21,7 +21,7 @@
 * 카트 추가
 
 ## 카트
-* 정적 쿼리 VS 페이지 쿼리 https://www.gatsbyjs.org/docs/static-query/
+* 페이지 쿼리 VS 정적 쿼리 https://www.gatsbyjs.org/docs/static-query/#how-staticquery-differs-from-page-query
 * https://www.netlify.com/products/forms/
   * 적용시 문제점들 
   * 이메일 알림 
