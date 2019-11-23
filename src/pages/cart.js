@@ -42,11 +42,13 @@ const Cart = () => {
                 <form name="order" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                     <input type="hidden" name="bot-field" />
                     <input type="hidden" name="form-name" value="order" />
-
                     <div>
                         <label>Products</label>
                         <Textarea name="products" readOnly value={cartData} />
                     </div>
+                    <p>
+                        <label>Your Name: <input type="text" name="name" required/></label>   
+                    </p>
                     <button type="submit">주문</button>
                 </form>
                 
